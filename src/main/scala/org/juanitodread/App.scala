@@ -29,9 +29,9 @@ object App extends AppConf {
 
     // Notify user that server has started
     println(s"Server started at http://${httpHost}:${httpPort} - To stop it press RETURN...")
-    StdIn.readLine()
-    server.flatMap(srv => srv.unbind())
-      .onComplete(evt => system.terminate())
+    //    StdIn.readLine()
+    //    server.flatMap(srv => srv.unbind())
+    //      .onComplete(evt => system.terminate())
   }
 
 }
