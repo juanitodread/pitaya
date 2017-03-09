@@ -14,4 +14,5 @@ trait AppConf {
   // expose configuration
   val httpHost = httpConfig.getString("host")
   val httpPort = httpConfig.getInt("port")
+  val apiVersion = httpConfig.getString("api-version")
 }
