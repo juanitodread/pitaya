@@ -2,6 +2,12 @@ package org.juanitodread.util
 
 import com.typesafe.config.ConfigFactory
 
+/**
+ * Application configuration
+ *
+ * @author juan.sandoval
+ *
+ */
 trait AppConf {
   private val config = ConfigFactory.load()
 
@@ -15,4 +21,10 @@ trait AppConf {
   val httpHost = httpConfig.getString("host")
   val httpPort = httpConfig.getInt("port")
   val apiVersion = httpConfig.getString("api-version")
+
+  val rabbitHost = rabbitConfig.getString("host")
+  val rabbitPort = rabbitConfig.getInt("port")
+  val rabbitUsername = rabbitConfig.getString("username")
+  val rabbitPassword = rabbitConfig.getString("password")
+  val rabbitInputQueue = rabbitConfig.getString("input_queue")
 }
